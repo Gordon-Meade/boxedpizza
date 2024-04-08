@@ -1,0 +1,36 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <!-- Header content -->
+        <h1>Boxed WoodFired Pizza</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ home_url }}">Home</a></li>
+                <!-- Update other navigation links accordingly -->
+                <li><a href="{% url 'book_table' %}">Booking</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Content block -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
