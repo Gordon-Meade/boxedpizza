@@ -10,30 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 import dj_database_url
-
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-
 SECRET_KEY = 'dvgdsujgfuhrdvsdlukjvhdsvluijkdsghvdsiuvhgdsioupvhsg'
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
-
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-gordonmeade-boxedpizza-w189np1apc5.ws-eu110.gitpod.io','.herokuapp.com']
-
+ALLOWED_HOSTS = ['8000-gordonmeade-boxedpizza-w189np1apc5.ws-eu110.gitpod.io', '.herokuapp.com']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,13 +49,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',  
 ]
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
 
 ROOT_URLCONF = 'boxedpizza.urls'
 
@@ -83,10 +76,7 @@ TEMPLATES = [
     },
 ]
 
-
-
 WSGI_APPLICATION = 'boxedpizza.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -98,11 +88,8 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-# }
-
-
+# Uncomment and use this for production with Heroku
+# DATABASES['default'] = dj_database_url.parse(os.environ.get("DATABASE_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -122,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -136,13 +122,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

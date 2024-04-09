@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Booking
 from .forms import BookingForm
 
@@ -19,4 +20,9 @@ def book_table(request):
 
 def booking_success(request):
     return render(request, 'booking/booking_success.html')
+
+@login_required
+def booking_details(request, booking_id):
+    booking = Booking.objects.get(pk=booking_id)
+    return render(request, 'booking_details.html', {'booking': booking})
 

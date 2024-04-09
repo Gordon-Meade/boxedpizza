@@ -16,8 +16,16 @@ class Booking(models.Model):
     NUMBER_OF_PEOPLE_CHOICES = [(i, i) for i in range(1, 11)] 
     number_of_people = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
 
+    slug = models.SlugField(unique=True, default='default-slug')
+
+
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        # Generate unique slug based on booking date, time, and name
+        self.slug = f"{self.date}-{self.time}-{self.name}".replace(" ", "-").lower()
+        super().save(*args, **kwargs)
 
     def clean(self):
         # Check if there are available seats for the given date and time
