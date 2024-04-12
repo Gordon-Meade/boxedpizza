@@ -1,9 +1,43 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/booking_successful.css' %}">
+{% endblock %}
+
+
+
 {% block content %}
-<body>
-    <h1>Booking Successful!</h1>
-    <p>Thank you for booking with us. Your reservation has been confirmed.</p>
-    <!-- You can add more content here as needed -->
-</body>
+<div class="carousel-container">
+    <!-- Carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/tomatopesto.png' %}" class="d-block w-100 h-80" alt="tomato and pesto pizza">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/pear_rocket.png' %}" class="d-block w-100" alt="Pear and Rocket pizza">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Overlay Content -->
+    <div class="overlay">
+        <div class="overlay-content">
+            <h1 class="mt-5">Booking Successful!</h1>
+            <p class="mt-4">Thank you for booking with us. We will contact you to confirm this booking and look forward to meeting you!</p>
+        </div>
+    </div>
+</div>
+
+
+  
 {% endblock %}
