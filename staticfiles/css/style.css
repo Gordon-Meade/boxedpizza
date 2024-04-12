@@ -1,0 +1,63 @@
+h2 h3 h4 h5 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  header {
+      
+      padding-top: 15px;
+  }
+  
+  .rounded-image {
+    border-radius: 50px;
+    animation: rotateImage 4s linear infinite; /* Apply animation */
+  }
+
+  @keyframes rotateImage {
+      0% { transform: rotate(0deg); } /* Start position */
+      100% { transform: rotate(360deg); } /* End position (360 degrees) */
+  }
+
+  nav {
+    position: fixed;
+  }
+  
+  .head-info {
+    padding:10px;
+  }
+  
+  body {
+      background-color: black;
+      color: #fafafa;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+        
+     
+  
+
+footer a {
+    margin: 0 10px;
+    color: #fafafa;
+    text-align: center;
+    border-block: 5px;
+    padding: 20px;
+       
+}
+  
+footer .copyright {
+    color: rgba(252, 244, 244, 0.718);
+    font-size: xx-small;
+    border-block: 5px;
+    padding: px;
+    margin: 0;
+       
+}
+  
+      /* Custom style to adjust the position of the dropdown menu */
+  .dropdown-menu.custom-dropdown {
+    right: auto;
+    left: auto;
+    padding: 5px;
+  }

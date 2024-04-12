@@ -1,6 +1,21 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1>INDEX PAGE</h1>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center mt-5">Welcome to <br> Boxed WoodFired Pizza <br> Kenmare</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-md-8">
+        <div class="cover-image d-flex justify-content-center">
+          <img src="{% static 'images/boxedoutsideembossed.png' %}" alt="Outside image of Restaurant" class="img-fluid" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 {% endblock %}
