@@ -36,9 +36,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
+    'widget_tweaks',
     'story',
     'bookings',
     'home',
+    'dining',
 ]
 
 MIDDLEWARE = [

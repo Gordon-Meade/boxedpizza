@@ -61,3 +61,16 @@ footer .copyright {
     left: auto;
     padding: 5px;
   }
+
+  @media (min-width: 768px) {
+    .success {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust background color as needed */
+        padding: 20px;
+        color: white;
+    }
+}

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load widget_tweaks %}
 
 {% block content %}
 <head>
@@ -21,15 +22,54 @@
             <div class="col-12 col-md-6">
               <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary mt-3">Book</button>
+                <!-- Apply widget tweaks to customize form fields -->
+                <div class="form-group">
+                  <label for="{{ form.name.id_for_label }}">Name:</label>
+                  {{ form.name|add_class:"form-control" }}
+                </div>
+                
+                
+                <div class="form-group">
+                  <label for="{{ form.email.id_for_label }}">Email:</label>
+                  {{ form.email|add_class:"form-control" }}
+                </div>
+                
+                
+                <div class="form-group">
+                  <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+                  {{ form.phone_number|add_class:"form-control" }}
+                </div>
+                
+                
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-">
+                      <label for="{{ form.date.id_for_label }}">Date:</label>
+                      {{ form.date|add_class:"form-control" }}
+                    </div>
+                  </div>   
+                    <div class="col">
+                      <label for="{{ form.time.id_for_label }}">Time:</label>
+                      {{ form.time|add_class:"form-control" }}
+                    </div>
+                    
+                    <div class="col"><label for="{{ form.number_of_people.id_for_label }}">Number of People:</label>
+                     {{ form.number_of_people|add_class:"form-control" }}
+                    </div>
+                </div>
+               
+                 
+                  
+                
+                <!-- Add more fields similarly -->
+                <button type="submit" class="btn btn-dark mt-3">Book</button>
               </form>
             </div>
         <div class="row justify-content-center">
           <div class="col-12 col-md-8">
             <h4 class="text-center mt-4">While we will do our best to accommodate your preferred time, please note that we operate on a dual booking system.</h4>
-            <h4 class="text-center">Please ensure that you fill out the form accurately so that we can contact you to confirm your reservation.</h4>
-            <h5 class="text-center mt-4">We are excited to provide you with an unforgettable pizza experience!</h5>
+            <p class="text-center">Please ensure that you fill out the form accurately so that we can contact you to confirm your reservation.</p>
+            <p class="text-center mt-4">We are excited to provide you with an unforgettable pizza experience!</p>
           </div>
         </div>
       </div>
