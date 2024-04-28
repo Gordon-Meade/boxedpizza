@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="{% static 'images/tomatopesto.png' %}" class="w-100" style="height: 800px; object-fit: cover;" alt="Pizza Background Image">
+        <div class="overlay"></div>
+        <div class="content text-center position-absolute top-50 start-50 translate-middle" style="background-color: rgba(0, 0, 0, 0.5);">
+            <h1 class="text-white display-1">Neopolitan Style Pizza</h1>
+            <p class="text-white lead">Open from 4:30 to 10pm</p>
+            <a href="#menu" class="btn btn-lg btn-dark">Let me see the menu</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container py-5" id="menu">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="text-white">THE MENU</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#starters" class="btn btn-outline-light btn-lg mb-3 d-block">Starters</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#pizza" class="btn btn-outline-light btn-lg mb-3 d-block">Pizza</a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#dessert" class="btn btn-outline-light btn-lg mb-3 d-block">Desserts</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="row mt-5">
+        <div class="col">
+            <div id="starters" class="menu-section mt-4">
+                <h3 class="text-dark bg-white p-2">STARTERS</h3>
+
+                <h1><b>Garlic Bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€8.00</span></h1>
+                <p class="w3-text-grey">Hand Stretched dough with Irish butter smothered in Garlic with a parsley garnish</p>
+                <hr>
+                <h1><b>Spicy Garlic Cheese Bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">€12.50</span></h1>
+                <p class="w3-text-grey">Hand Stretched dough, Irish butter, Crushed Garlic, Red Onion, Pepper Flakes with a parsley garnish</p>
+                <hr>
+            </div>
+
+
+            <div id="pizza" class="menu-section">
+                <h3 class="text-dark bg-white p-2">PIZZA</h3>
+                <!-- Pizza menu content goes here -->
+                <h1><b>Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.00</span></h1>
+                <p class="w3-text-grey">Extra Virgin Olive oil, mozzarella, fresh basil</p>
+                <hr>
+                <h1><b>Pepperoni</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12.00</span></h1>
+                <p class="w3-text-grey">Mozzarella, Salami Picante</p>
+                <hr>
+                <h1><b>Vedure</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+                <p class="w3-text-grey">Mozzarella, Roast Peppers, Red Onion, Spinich, Mushrooms</p>
+                <hr>
+                <h1><b>Mirabella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+                <p class="w3-text-grey">Goats Cheese, Courgette, Lemon, Chillies</p>
+                <hr>
+            </div>
+
+
+            <div id="dessert" class="menu-section mt-4">
+                <h3 class="text-dark bg-white p-2">DESSERTS</h3>
+                <!-- Pasta menu content goes here -->
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

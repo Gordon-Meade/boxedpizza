@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from home.views import index  
-from bookings import views as bookings_views  # Rename bookings views
-from story import views as story_views  # Rename story views
+from bookings import views as bookings_views 
+from story import views as story_views 
+from menu.views import menu
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('booking/', include('bookings.urls')),
     path('story/', include('story.urls')),
     path('dining/', include('dining.urls')),
+    path('menu/', include('menu.urls')),
 ]
 
 

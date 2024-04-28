@@ -2,20 +2,34 @@ h2 h3 h4 h5 {
     font-family: 'Times New Roman', Times, serif;
   }
   
-  header {
-      
+h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 500;
       padding-top: 15px;
   }
+
+
   
   .rounded-image {
     border-radius: 50px;
-    animation: rotateImage 4s linear infinite; /* Apply animation */
+    animation: rotateImage 8s linear infinite; /* Apply animation */
   }
 
   @keyframes rotateImage {
-      0% { transform: rotate(0deg); } /* Start position */
-      100% { transform: rotate(360deg); } /* End position (360 degrees) */
-  }
+    0% { transform: rotate(0deg); } /* Start position */
+    100% { transform: rotate(360deg); } /* End position (360 degrees) */
+}
+
+.fade-in-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 60px;
+  opacity: 0; /* Start with opacity 0 */
+}
+
+
+
+
+
 
   nav {
     position: fixed;
