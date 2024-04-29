@@ -6,16 +6,114 @@ h2 h3 h4 h5 {
       
       padding-top: 15px;
   }
+
+  .green-text {
+    color: green;
+}
+
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: red;
+}
+
+.ripple-text {
+  display: inline-block;
+  position: relative;
+}
+
+.ripple-text h5,
+.ripple-text h6 {
+  position: relative;
+  animation: ripple 2s 3 alternate;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
   
   .rounded-image {
     border-radius: 50px;
-    animation: rotateImage 4s linear infinite; /* Apply animation */
-  }
+    
+}
 
-  @keyframes rotateImage {
-      0% { transform: rotate(0deg); } /* Start position */
-      100% { transform: rotate(360deg); } /* End position (360 degrees) */
+@keyframes rotateImage {
+  0% { transform: rotate(0deg); } /* Start position */
+  50% { transform: rotate(172.5deg); } /* Halfway point (half of 345 degrees) */
+  100% { transform: rotate(360deg); } /* End position (345 degrees) */
+}
+
+
+  .boxed-link {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    transition: font-size 0.3s ease; /* Add transition for smooth effect */
+}
+
+.boxed-link:hover,
+.boxed-link:active {
+    font-size: 3em; /* Increase font size on hover and when pressed */
+}
+
+.fire-container {
+  position: relative;
+  text-align: center; /* Center-align the text within the container */
+}
+
+.wood-paragraph {
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.wood-paragraph span {
+  display: inline-block;
+}
+
+.fire-container p {
+  position: absolute;
+  left: 50%; /* Position the text at 50% of the container width */
+  top: 50%; /* Position the text at 50% of the container height */
+  transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+}
+
+.fire-container {
+  animation: fire 3s linear infinite;
+}
+
+@keyframes fire {
+  0% {
+      font-size: 16px;
+      color: yellow;
   }
+  50% {
+      font-size: 20px;
+      color: red;
+  }
+  100% {
+      font-size: 16px;
+      color: yellow;
+  }
+}
+
+
+
 
   nav {
     position: fixed;
@@ -54,6 +152,8 @@ footer .copyright {
     margin: 0;
        
 }
+
+
   
       /* Custom style to adjust the position of the dropdown menu */
   .dropdown-menu.custom-dropdown {
@@ -61,6 +161,18 @@ footer .copyright {
     left: auto;
     padding: 5px;
   }
+
+  @media screen and (max-width: 768px) {
+    .fire-container p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 350px) {
+  .fire-container p {
+      font-size: 10px; /* Adjust font size for smaller screens */
+  }
+}
 
   @media (min-width: 768px) {
     .success {
@@ -73,4 +185,27 @@ footer .copyright {
         padding: 20px;
         color: white;
     }
+}
+
+
+.story-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.story-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.story-container p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .story-container {
+      text-align: left;
+  }
 }

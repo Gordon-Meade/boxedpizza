@@ -3,7 +3,10 @@
 
 {% block content %}
 <div class="container">
-  <img src="{% static 'images/boxed logo.jpg' %}" alt="Boxed Logo" class="rounded-image" width="100" height="100">  
+  <a href="{% url 'menu' %}">
+    <img src="{% static 'images/boxed logo.jpg' %}" alt="Boxed Logo" class="rounded-image" width="100" height="100">
+</a>
+ 
   
     <div class="row justify-content-center mt-4">
       <div class="col-12 col-md-8">
@@ -15,7 +18,15 @@
     <div> 
       <br>
       <br>
-      <h3>Welcome to Boxed</h3>
+      <em class="ripple-text">
+        <h5>
+          <span class="green-text">Neapolitan </span>Hand Stretc<span class="red-text">hed Pizza</span>
+        </h5>
+        <h6>
+          <span class="green-text">Fresh from</span> Our Oven to <span class="red-text">Your Plate!</span>
+        </h6>
+      </em>
+      
       <br>
       <br>
     </div>
