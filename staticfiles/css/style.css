@@ -80,7 +80,10 @@ h2 h3 h4 h5 {
   font-family: 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
+  white-space: nowrap; /* Prevents the word from breaking */
+  word-break: break-all; /* Allows individual characters to break if necessary */
 }
+
 
 .wood-paragraph span {
   display: inline-block;

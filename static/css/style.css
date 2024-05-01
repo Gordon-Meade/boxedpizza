@@ -1,22 +1,22 @@
-h2 h3 h4 h5 {
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  header {
-      
-      padding-top: 15px;
-  }
+/* Global Styles */
+h2, h3, h4, h5 {
+  font-family: 'Times New Roman', Times, serif;
+}
 
-  .green-text {
-    color: green;
+header {
+  padding-top: 15px;
+}
+
+.green-text {
+  color: green;
 }
 
 .white-text {
-    color: white;
+  color: white;
 }
 
 .red-text {
-    color: red;
+  color: red;
 }
 
 .ripple-text {
@@ -45,12 +45,8 @@ h2 h3 h4 h5 {
   }
 }
 
-
-
-  
-  .rounded-image {
-    border-radius: 50px;
-    
+.rounded-image {
+  border-radius: 50px;
 }
 
 @keyframes rotateImage {
@@ -59,18 +55,18 @@ h2 h3 h4 h5 {
   100% { transform: rotate(360deg); } /* End position (345 degrees) */
 }
 
-
-  .boxed-link {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    transition: font-size 0.3s ease; /* Add transition for smooth effect */
+.boxed-link {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  transition: font-size 0.3s ease; /* Add transition for smooth effect */
 }
 
 .boxed-link:hover,
 .boxed-link:active {
-    font-size: 3em; /* Increase font size on hover and when pressed */
+  font-size: 3em; /* Increase font size on hover and when pressed */
 }
 
+/* Fire Container Styles */
 .fire-container {
   position: relative;
   text-align: center; /* Center-align the text within the container */
@@ -91,103 +87,80 @@ h2 h3 h4 h5 {
   left: 50%; /* Position the text at 50% of the container width */
   top: 50%; /* Position the text at 50% of the container height */
   transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
-}
-
-.fire-container {
-  animation: fire 3s linear infinite;
+  animation: fire 3s linear infinite; /* Fire animation */
 }
 
 @keyframes fire {
   0% {
-      font-size: 16px;
-      color: yellow;
+    font-size: 16px;
+    color: yellow;
   }
   50% {
-      font-size: 20px;
-      color: red;
+    font-size: 20px;
+    color: red;
   }
   100% {
-      font-size: 16px;
-      color: yellow;
+    font-size: 16px;
+    color: yellow;
   }
 }
 
+/* Navigation Styles */
+nav {
+  position: fixed;
+}
 
-
-
-  nav {
-    position: fixed;
-  }
-  
-  .head-info {
-    padding:10px;
-  }
-  
-  body {
-      background-color: black;
-      color: #fafafa;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-  }
-        
-     
-  
-
+/* Footer Styles */
 footer a {
-    margin: 0 10px;
-    color: #fafafa;
-    text-align: center;
-    border-block: 5px;
-    padding: 20px;
-       
+  margin: 0 10px;
+  color: #fafafa;
+  text-align: center;
+  border-block: 5px;
+  padding: 20px;
 }
-  
+
 footer .copyright {
-    color: rgba(252, 244, 244, 0.718);
-    font-size: xx-small;
-    border-block: 5px;
-    padding: px;
-    margin: 0;
-       
+  color: rgba(252, 244, 244, 0.718);
+  font-size: xx-small;
+  border-block: 5px;
+  padding: px;
+  margin: 0;
 }
 
+/* Dropdown Menu Styles */
+.dropdown-menu.custom-dropdown {
+  right: auto;
+  left: auto;
+  padding: 5px;
+}
 
-  
-      /* Custom style to adjust the position of the dropdown menu */
-  .dropdown-menu.custom-dropdown {
-    right: auto;
-    left: auto;
-    padding: 5px;
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .fire-container p {
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
-
-  @media screen and (max-width: 768px) {
-    .fire-container p {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
 }
 
 @media screen and (max-width: 350px) {
   .fire-container p {
-      font-size: 10px; /* Adjust font size for smaller screens */
+    font-size: 10px; /* Adjust font size for smaller screens */
   }
 }
 
-  @media (min-width: 768px) {
-    .success {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust background color as needed */
-        padding: 20px;
-        color: white;
-    }
+@media (min-width: 768px) {
+  .success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color as needed */
+    padding: 20px;
+    color: white;
+  }
 }
 
-
+/* Story Container Styles */
 .story-container {
   text-align: center;
   padding: 20px;
@@ -206,6 +179,6 @@ footer .copyright {
 
 @media (min-width: 768px) {
   .story-container {
-      text-align: left;
+    text-align: left;
   }
 }
