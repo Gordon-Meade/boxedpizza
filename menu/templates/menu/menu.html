@@ -4,12 +4,19 @@
 {% block content %}
 <div class="container-fluid p-0">
     <div class="position-relative">
-        <img src="{% static 'images/tomatopesto.png' %}" class="w-100" style="height: 800px; object-fit: cover;" alt="Pizza Background Image">
+        <img src="{% static 'images/pestoenhanced.jpg' %}" class="w-100" style="height: 800px; object-fit: cover;" alt="Pizza Background Image">
         <div class="overlay"></div>
-        <div class="content text-center position-absolute top-50 start-50 translate-middle" style="background-color: rgba(0, 0, 0, 0.5);">
-            <h1 class="text-white display-1">Neopolitan Style Pizza</h1>
+        <div class="content text-center position-absolute top-50 start-50 translate-middle p-3" style="background-color: rgba(0, 0, 0, 0.7);">
+            <h1 class="text-white display-1 boxed-link" style="text-decoration: none; color: inherit;">Neopolitan Style Pizza</h1>
+            <h2 class="text-white display-1 boxed-link" style="text-decoration: none; color: inherit;">Take Away Menu</h2>
             <p class="text-white lead">Open from 4:30 to 10pm</p>
-            <a href="tel:+353646686020" class="text-white"><i class="fa-solid fa-phone text-white" ></i> <br> Order Here</a>
+            <button class="btn btn-success text-white">
+                <a href="tel:+353646686020" class="text-white text-decoration-none">
+                  <i class="fa-solid fa-phone"></i> 
+                  <br> Order Here
+                </a>
+              </button>
+              
         </div>
     </div>
 </div>
@@ -112,7 +119,10 @@
                 <h3 class="text-dark bg-white p-2">DESSERTS</h3>
                 
                 <h1>Gelato by Scúp</h1>
-                <h3>Try the award winning ice-cream as a treat you deserve</h3>
+                <h3>Try the award winning ice-cream <br>
+                Available in 1 or 2 Scoops</h3>
+                <br>
+                <h5>Flavours include: <h6>Strawberry, Cookies and Cream, Oreo & many more... ask for details!</h6></h5>
             </div>
 
             <div id="drinks" class="menu-section mt-4">

@@ -5,7 +5,11 @@
 
 {% block content %}
 <div class="bg-image-container">
-    <div class="overlay"></div>
+    <div class="overlay"><button class="btn btn-dark text-white text-center m-2">
+      <a href="{% url 'book_table' %}" class="text-white text-decoration-none" style="font-family: 'Times New Roman', Times, serif;">
+      Book Here
+      </a>
+    </button></div>
     <img src="{% static 'images/boxed interior.jpg' %}" alt="image of inside restaurant" class="img-fluid" style="max-width: 100%; height: auto;">
 
     
@@ -50,9 +54,9 @@
   <div class="row mt-5">
     <div class="col-md-8 offset-md-2">
       <div class="text-center">
-        <h3 class="mb-4">🍷 Italian Wines and Coffees to Delight Your Palate</h3>
+        <h3 class="mb-4">🍷 Italian Wines to Delight Your Palate</h3>
         <p class="lead">
-          Pair your meal with our carefully curated selection of Italian wines, chosen to complement the flavors of our dishes and transport you to the vineyards of Italy. And after your meal, indulge in a cup of rich, aromatic Italian coffee, the perfect ending to your culinary adventure.
+          Pair your meal with our carefully curated selection of Italian wines, chosen to complement the flavors of our dishes and transport you to the vineyards of Italy. And after your meal, indulge in an ice-cream for Scúp - the award winning Irish ice-cream creators!.
         </p>
       </div>
     </div>
