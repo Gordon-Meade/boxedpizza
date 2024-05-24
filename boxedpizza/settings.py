@@ -27,7 +27,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com', 'www.boxedwoodfiredpizza.ie', 'www.boxedwoodfiredpizza.com',]
 
 # Application definition
 INSTALLED_APPS = [
