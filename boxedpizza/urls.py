@@ -31,6 +31,7 @@ urlpatterns = [
     path('story/', include('story.urls')),
     path('dining/', include('dining.urls')),
     path('menu/', include('menu.urls')),
+    path('retail/', include('retail.urls')),
 ]
 
 

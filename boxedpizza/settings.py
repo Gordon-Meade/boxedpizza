@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'dining',
     'menu',
+    'retail',
 ]
 
 MIDDLEWARE = [

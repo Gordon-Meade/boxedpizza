@@ -1,66 +1,121 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <div class="container">
   <a href="{% url 'menu' %}">
-    <img src="{% static 'images/boxed logo.jpg' %}" alt="Boxed Logo" class="rounded-image" width="100" height="100">
-</a>
- 
-  
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-md-8">
-        <div class="cover-image d-flex justify-content-center">
-          <img src="{% static 'images/boxed outside.jpg' %}" alt="Outside image of Restaurant" class="img-fluid" style="max-width: 100%; height: auto;">
-        </div>
+    <img
+      src="{% static 'images/boxed logo.jpg' %}"
+      alt="Boxed Logo"
+      class="rounded-image"
+      width="100"
+      height="100"
+    />
+  </a>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-8">
+      <div class="cover-image d-flex justify-content-center">
+        <img
+          src="{% static 'images/boxed outside.jpg' %}"
+          alt="Outside image of Restaurant"
+          class="img-fluid"
+          style="max-width: 100%; height: auto"
+        />
       </div>
+      <div id="TA_socialButtonBubbles927" class="TA_socialButtonBubbles row justify-content-center mt-4">
+        <ul id="OYIJur" class="TA_links qqApfUXzB">
+          <li id="WVxeCdIGFqT" class="Ykg6RS">
+            <a
+              target="_blank"
+              href="https://www.tripadvisor.com/Restaurant_Review-g211860-d23159754-Reviews-Boxed_Kenmare-Kenmare_County_Kerry.html"
+              ><img
+                src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logomark.svg"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <script
+        async
+        src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=927&amp;locationId=23159754&amp;color=green&amp;size=rect&amp;lang=en_US&amp;display_version=2"
+        data-loadtrk
+        onload="this.loadtrk=true"
+      ></script>
     </div>
-    <div> 
-      <br>
-      <br>
-      <em>
-        <h5>
-          <span class="boxed-link" style="text-decoration: none; color: inherit;">Neopolitan Hand Stretched Pizza</span>
-        </h5>
-        <h6>
-          <span class="boxed-link" style="text-decoration: none; color: inherit;">Fresh from Our Oven to Your Plate! </span>
-        </h6>
-      </em>
-      
-      <br>
-      <br>
-    </div>
-    <div>
-      <img src="{% static 'images/pearpizza.jpg' %}" alt="pear pizza" width="300" height="300">
-    </div>
-    <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <div class="text-center mt-5">
-              <h3 class="mb-4 text-white">🍕 Welcome to the Boxed Dine-In Experience!</h3>
-              <p class="lead text-white">
-                Indulge in the exquisite art of Italian cuisine at Boxed, where every bite tells a story of passion and authenticity. Step into our cozy ambiance and prepare to embark on a culinary journey like no other.
-              </p>
-            </div>
+  </div>
+  <div>
+    <br />
+    <br />
+    <em>
+      <h5>
+        <span class="boxed-link" style="text-decoration: none; color: inherit"
+          >Neopolitan Hand Stretched Pizza</span
+        >
+      </h5>
+      <h6>
+        <span class="boxed-link" style="text-decoration: none; color: inherit"
+          >Fresh from Our Oven to Your Plate!
+        </span>
+      </h6>
+    </em>
+
+    <br />
+    <br />
+  </div>
+  <div>
+    <img
+      src="{% static 'images/pearpizza.jpg' %}"
+      alt="pear pizza"
+      width="300"
+      height="300"
+    />
+  </div>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="text-center mt-5">
+            <h3 class="mb-4 text-white">
+              🍕 Welcome to the Boxed Dine-In Experience!
+            </h3>
+            <p class="lead text-white">
+              Indulge in the exquisite art of Italian cuisine at Boxed, where
+              every bite tells a story of passion and authenticity. Step into
+              our cozy ambiance and prepare to embark on a culinary journey like
+              no other.
+            </p>
           </div>
         </div>
-      <img src="{% static 'images/outsidedining.png' %}" alt="people eating out side" width="300" height="300">
+      </div>
+      <img
+        src="{% static 'images/outsidedining.png' %}"
+        alt="people eating out side"
+        width="300"
+        height="300"
+      />
     </div>
     <div>
       <div class="row mt-5">
         <div class="col-md-8 offset-md-2">
           <div class="text-center">
-            <h3 class="mb-4">🔥 Hand-Stretched Pizzas, Wood-Fired to Perfection</h3>
+            <h3 class="mb-4">
+              🔥 Hand-Stretched Pizzas, Wood-Fired to Perfection
+            </h3>
             <p class="lead">
-              Our pizzas are a labor of love, crafted by skilled hands and baked to perfection in our stone oven, wood-fired for that quintessential Italian taste. Each bite is a symphony of flavors, a harmony of ingredients meticulously selected for their quality and freshness.
+              Our pizzas are a labor of love, crafted by skilled hands and baked
+              to perfection in our stone oven, wood-fired for that
+              quintessential Italian taste. Each bite is a symphony of flavors,
+              a harmony of ingredients meticulously selected for their quality
+              and freshness.
             </p>
           </div>
         </div>
       </div>
-      <img src="{% static 'images/pizzaoven.jpg' %}" alt="pizza in oven" width="300" height="300">
+      <img
+        src="{% static 'images/pizzaoven.jpg' %}"
+        alt="pizza in oven"
+        width="300"
+        height="300"
+      />
     </div>
   </div>
 
-
-{% endblock %}
+  {% endblock %}
+</div>
